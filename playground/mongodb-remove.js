@@ -17,7 +17,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,client)=>{
     //     });
     //  //deleteOne
 
-     db.collection('Todos').findOneAndDelete({_id:ObjectId("5c0a2e6ab7088a42d88957f9")}).then((result)=>{
+     db.collection('Todos').findOneAndDelete({_id:new ObjectId("5c0a2e6ab7088a42d88957f9")}).then((result)=>{
         console.log(result);
      });
 
@@ -32,7 +32,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,client)=>{
         console.log(result);
     });
 
-    db.collection('Users').findOneAndDelete({_id:ObjectId("5c10f0a58750e4b6c6e01f09")}).then(()=>{
+    db.collection('Users').findOneAndDelete({_id:new ObjectId("5c10f0a58750e4b6c6e01f09")}).then(()=>{
         console.log('Ok deleted');
     })
 
